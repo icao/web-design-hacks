@@ -5,21 +5,31 @@ BEM:  Bloque - Elemento - Modificador
 /*Variables*/
 :root {
    --black-color: #17181c;
-   --blue-color: #4054a2;
-   --white-color: #ffffff;
+   --blue-color: #3e50b4;
    --white-rbg-color: 255, 255, 255;
+   --green-rbg-color: 0, 212, 113;
 }
 
 * {
    margin: 0;
    padding: 0;
-   /* box-sizing: border-box; */
 }
+
 /*Bloque*/
+.header {
+   width: 100%;
+   height: 300px;
+   box-sizing: border-box;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
 .cursor {
    width: 20px;
    height: 20px;
-   border: 10px solid var(--white-color);
+   border: 10px solid rgba(var(--white-rbg-color), .8);
    border-radius: 50%;
    position: absolute;
    transition-duration: 200ms;
@@ -40,10 +50,17 @@ BEM:  Bloque - Elemento - Modificador
 }
 
 /*Elemento*/
+.header__title {
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 300;
+   color: rgb(var(--green-rbg-color));
+}
+
 .bg__canvas {
    width: 100%;
    height: 100vh;
    background-color: var(--blue-color);
+   box-sizing: border-box;
 }
 
 
@@ -52,17 +69,22 @@ BEM:  Bloque - Elemento - Modificador
 /*Modificador*/
 .cursor--expand {
    animation: cursor-animate-3 550ms forwards;
-   border: 10px solid red;
+   border: 10px solid rgb(var(--green-rbg-color));
+}
+
+.cursor--expand::after {
+   border: 15px solid rgba(var(--green-rbg-color), .3);
 }
 
 /*Keyframes*/
 @keyframes cursor-animate {
- from {
-   transform: scale(1);
- }
- to {
-   transform: scale(1.5)
- }
+   from {
+      transform: scale(1);
+   }
+
+   to {
+      transform: scale(1.5)
+   }
 }
 
 @keyframes cursor-animate-2 {
