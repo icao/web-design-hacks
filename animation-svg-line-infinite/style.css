@@ -6,6 +6,8 @@ BEM:  Bloque - Elemento - Modificador
 :root {
    --black-color: #17181c;
    --blue-color: #3e50b4;
+   --purple-dark-color: #1b1c30;
+   --pink-color: #F856B4;
    --white-rbg-color: 255, 255, 255;
    --green-rbg-color: 0, 212, 113;
 }
@@ -103,16 +105,18 @@ BEM:  Bloque - Elemento - Modificador
 .st4 {
    fill: none;
    stroke: #00BC7F;
-   stroke-width: 1.652;
-   stroke-linejoin: round;
+   stroke-width: 5;
+   stroke-linecap: round;
+    stroke-dasharray: 1, 9;
    stroke-miterlimit: 10;
 }
 
 .st5 {
    fill: none;
    stroke: #5F43E9;
-   stroke-width: 1.652;
-   stroke-linejoin: round;
+   stroke-width: 5;
+   stroke-linecap: round;
+    stroke-dasharray: 1, 9;
    stroke-miterlimit: 10;
 }
 
@@ -124,9 +128,9 @@ BEM:  Bloque - Elemento - Modificador
    stroke-miterlimit: 10;
 }
 
-.dashed-line {
+/* .dashed-line {
    stroke-dasharray: 1, 9;
-}
+} */
 
 @keyframes dash-animation {
    to {
@@ -146,4 +150,27 @@ BEM:  Bloque - Elemento - Modificador
 
 .dash-move-opposite {
    animation: dash-animation-opposite 20s infinite linear;
+}
+
+
+
+
+
+.grid {
+   background-color: var(--purple-dark-color);
+   width: 100vw;
+   height: auto;
+}
+
+.grid__container {
+   display: grid;
+   grid-template-rows: repeat(6, 1fr);
+   grid-template-columns: repeat(2, 1fr);
+
+   grid-column-gap: 1em;
+   grid-row-gap: 1em;
+}
+
+.grid__container > * {
+   box-sizing: border-box;
 }

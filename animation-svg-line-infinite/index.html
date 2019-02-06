@@ -13,8 +13,7 @@
    <header class="header">
       <h1 class="header__title">Animation SVG Line Infinite</h1>
    </header>
-   <main>
-
+   <main class="grid">
       <!-- 
          El atributo x y y, posicionan nuestro svg.
          Con el atributo width="100%" height="auto", le indicamos el tamaño del contorno,
@@ -33,39 +32,56 @@
          
          Consultar para mas info: https://webdesign.tutsplus.com/es/tutorials/svg-viewport-and-viewbox-for-beginners--cms-30844
        -->
-      <h2 class="main__subtitle">Linea solida Horizontal - Vertical</h2>
-      <svg x="0px" y="0px" width="100%" height="auto" viewBox="0 0 1000 200">
-         <line class="st0" x1="0" y1="100" x2="1000" y2="100" />
-      </svg>
 
-      <svg x="0px" y="0px" width="100%" height="auto" viewBox="0 0 1000 200">
-         <line class="st0" x1="50" y1="0" x2="50" y2="200"/>  
-      </svg>
 
-      <svg x="0px" y="0px" viewBox="0 0 800 50">
-         <line class="st0 dash-move" x1="81" y1="10" x2="800" y2="10" />
-         <line class="st0 dash-move-opposite" x1="81" y1="30" x2="800" y2="30" />
-      </svg>
 
-      <div>
+
+      <div class="grid__container">
+         <svg x="0px" y="0px" width="100%" height="auto" viewBox="0 0 1000 200">
+            <line class="st0" x1="0" y1="100" x2="1000" y2="100" />
+         </svg>
+
+         <svg x="0px" y="0px" width="100%" height="auto" viewBox="0 0 1000 200">
+            <line class="st0" x1="50" y1="0" x2="50" y2="200" />
+         </svg>
+
+         <svg x="0px" y="0px" width="100%" height="auto" viewBox="0 0 800 200">
+            <line class="st0 dash-move" x1="0" y1="100" x2="800" y2="100" />
+         </svg>
+
+         <svg x="0px" y="0px" width="100%" height="auto" viewBox="0 0 800 200">
+            <line class="st0 dash-move-opposite" x1="0"  y1="100" x2="800" y2="100" />
+         </svg>
+
+
+         <svg x="0px" y="0px" width="100%" height="auto" viewBox="0 0 800 200">
+            <line class="st4 dash-move-opposite" x1="50" y1="0" x2="50" y2="200" />
+         </svg>
+
+         <svg x="0px" y="0px" width="100%" height="auto" viewBox="0 0 800 200">
+            <line class="st5 dash-move" x1="50" y1="0" x2="50" y2="200" />
+         </svg>
+
          <svg x="0px" y="0px" width="auto" height="auto" viewBox="0 0 640 200">
             <polyline class="st100 dash-move" points="0,40 40,40 40,80 80,80 80,120 120,120 120,160" />
          </svg>
-      </div>
-      <div>
          <svg x="0px" y="0px" width="100%" height="auto" viewBox="0 0 600 200">
             <polyline class="st100 dash-move-opposite" points="0,40 40,40 40,80 80,80 80, 80 80,160" />
          </svg>
+
       </div>
 
+
+      <h2 class="main__subtitle">Linea solida Horizontal - Vertical</h2>
+
+
       <!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-           y="0px" viewBox="0 0 640 480" style="enable-background:new 0 0 640 480;" xml:space="preserve">
-         <line class="st3 dashed-line dash-move-opposite" x1="81" y1="361" x2="292" y2="361" />
-         <line class="st4 dashed-line dash-move-opposite" x1="81" y1="333" x2="319" y2="253" />
+      <svg x="0px" y="0px" viewBox="0 0 640 480">
+         <!-- <line class="st3 dashed-line dash-move-opposite" x1="81" y1="361" x2="292" y2="361" /> -->
+         <!-- <line class="st4 dashed-line dash-move-opposite" x1="81" y1="333" x2="319" y2="253" /> -->
          <line class="st4 dashed-line dash-move-opposite" x1="319" y1="326" x2="319" y2="253" />
-         <line class="st4 dashed-line dash-move-opposite" x1="535" y1="326" x2="319" y2="253" />
-         <line class="st3 dashed-line dash-move" x1="341" y1="361" x2="535" y2="361" />
+         <!-- <line class="st4 dashed-line dash-move-opposite" x1="535" y1="326" x2="319" y2="253" /> -->
+         <!-- <line class="st3 dashed-line dash-move" x1="341" y1="361" x2="535" y2="361" /> -->
          <line class="st5 dashed-line dash-move" x1="320" y1="194" x2="320" y2="121" />
       </svg>
 
