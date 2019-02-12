@@ -4,17 +4,21 @@ BEM:  Bloque - Elemento - Modificador
 
 /*Variables*/
 :root {
-   --black-color: #17181c;
-   --blue-color: #3e50b4;
-   --purple-dark-color: #1b1c30;
-   --pink-color: #F856B4;
+   --black-color: #1b1c30;
+   --blue-color: #125cfb;
+   --purple-dark-color: #21213b;
+   --purple-medium-color: #2f304e;
+   --pink-color: #fa046f;
+   --pink-teen-color: #ff67aa;
    --white-rbg-color: 255, 255, 255;
    --green-rbg-color: 0, 212, 113;
+   --green-color: #00BC7F;
 }
 
 * {
    margin: 0;
    padding: 0;
+   box-sizing: border-box;
 }
 
 /*Bloque*/
@@ -39,9 +43,10 @@ BEM:  Bloque - Elemento - Modificador
 }
 
 .main__subtitle {
+   padding: 1em;
    font-family: Arial, Helvetica, sans-serif;
-   font-weight: 300;
-   color: rgb(var(--green-rbg-color));
+   font-weight: 100;
+   color: rgba(var(--white-rbg-color), 1);
 }
 
 .bg__canvas {
@@ -59,72 +64,60 @@ BEM:  Bloque - Elemento - Modificador
 
 /*Keyframes*/
 
-.line1 {
-   fill: none;
-   stroke: #09d;
-   stroke-width: 10;
-   stroke-linecap: round;
-   /* stroke-dasharray: 1, 20; */
-   stroke-dasharray: 1, 30;
-   stroke-dashoffset: 3;
+svg {
+   border: 1px solid var(--purple-medium-color);
+   border-radius: 6px;
 }
 
 .st0 {
    fill: none;
-   stroke: rgb(231, 6, 81);
-   stroke-width: 5;
+   stroke: var(--pink-color);
+   stroke-width: 10;
    stroke-linecap: round;
    stroke-dasharray: 1, 25;
-    stroke-dashoffset: 3;
+   stroke-dashoffset: 3;
 }
 
 
 .st100 {
    fill: none;
    stroke: rgb(255, 136, 0);
-   stroke-width: 5;
+   stroke-width: 10;
    stroke-linecap: round;
-   stroke-dasharray: 1, 9;
+   stroke-dasharray: 1, 20;
    stroke-dashoffset: 3;
 }
 
 
 
 
-
 .st3 {
    fill: none;
-   stroke: #00ACFF;
-   /* stroke-width: 1.652; */
-   stroke-width: 3.652;
-   /* stroke-linejoin: round; */
+   stroke: var(--blue-color);
+   stroke-width: 10;
    stroke-linecap: round;
+   stroke-dasharray: 1, 18;
    stroke-miterlimit: 10;
 }
+
 
 .st4 {
    fill: none;
    stroke: #00BC7F;
-   stroke-width: 5;
+   stroke-width: 10;
    stroke-linecap: round;
-    stroke-dasharray: 1, 9;
+   stroke-dasharray: 1, 18;
    stroke-miterlimit: 10;
 }
 
-.st5 {
-   fill: none;
-   stroke: #5F43E9;
-   stroke-width: 5;
-   stroke-linecap: round;
-    stroke-dasharray: 1, 9;
-   stroke-miterlimit: 10;
-}
+
 
 .st6 {
    fill: none;
-   stroke: #F856B4;
-   stroke-width: 1.652;
-   stroke-linejoin: round;
+   stroke: var(--pink-color);
+   stroke-width: 10;
+   stroke-linecap: round;
+   stroke-dasharray: 1, 18;
    stroke-miterlimit: 10;
 }
 
@@ -145,11 +138,11 @@ BEM:  Bloque - Elemento - Modificador
 }
 
 .dash-move {
-   animation: dash-animation 20s infinite linear;
+   animation: dash-animation 20s infinite cubic-bezier(1, .17, .02, .91);
 }
 
 .dash-move-opposite {
-   animation: dash-animation-opposite 20s infinite linear;
+   animation: dash-animation-opposite 20s infinite cubic-bezier(1, .17, .02, .91);
 }
 
 
@@ -158,8 +151,9 @@ BEM:  Bloque - Elemento - Modificador
 
 .grid {
    background-color: var(--purple-dark-color);
-   width: 100vw;
+   width: 100%;
    height: auto;
+   box-sizing: border-box;
 }
 
 .grid__container {
@@ -171,6 +165,12 @@ BEM:  Bloque - Elemento - Modificador
    grid-row-gap: 1em;
 }
 
-.grid__container > * {
+.grid__container>* {
+   width: 100%;
+   height: 100%;
    box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 }
