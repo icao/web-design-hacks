@@ -22,6 +22,7 @@ BEM:  Bloque - Elemento - Modificador
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   transition: .5s;
 }
 
 /*Bloque*/
@@ -166,8 +167,6 @@ svg {
       stroke-dashoffset: -1000;
    }
 }
-
-
 
 
 /*Media Querys*/
