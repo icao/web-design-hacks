@@ -176,3 +176,16 @@ svg {
    align-items: center;
    justify-content: center;
 }
+
+/*Media Querys*/
+
+@media screen and (max-width: 1020px) {
+   
+   .grid__container {
+      grid-template-columns: repeat(1, 1fr);
+
+      grid-column-gap: 1em;
+      grid-row-gap: 1em;
+
+   }
+}
