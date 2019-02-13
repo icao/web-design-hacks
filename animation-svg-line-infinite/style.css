@@ -4,15 +4,18 @@ BEM:  Bloque - Elemento - Modificador
 
 /*Variables*/
 :root {
-   --black-color: #1b1c30;
-   --blue-color: #125cfb;
+   --black-color: #1a1b2d;
+   --blue-color: #135bfb;
    --purple-dark-color: #21213b;
    --purple-medium-color: #2f304e;
-   --pink-color: #fa046f;
-   --pink-teen-color: #ff67aa;
+   --purple-intense-color: #6823f0;
+   --pink-color: #ff0175;
+   --pink-teen-color: #ff4677;
    --white-rbg-color: 255, 255, 255;
    --green-rbg-color: 0, 212, 113;
    --green-color: #00BC7F;
+   --orange-color: #ff8800;
+   --cyan-color: #15e9fe;
 }
 
 * {
@@ -32,37 +35,13 @@ BEM:  Bloque - Elemento - Modificador
 }
 
 
-
-
-
-/*Elemento*/
-.header__title {
-   font-family: Arial, Helvetica, sans-serif;
-   font-weight: 300;
-   color: rgb(var(--green-rbg-color));
-}
-
-.main__subtitle {
-   padding: 1em;
-   font-family: Arial, Helvetica, sans-serif;
-   font-weight: 100;
-   color: rgba(var(--white-rbg-color), 1);
-}
-
-.bg__canvas {
+.grid {
+   background-color: var(--purple-dark-color);
    width: 100%;
    height: auto;
-   background-color: var(--black-color);
    box-sizing: border-box;
 }
 
-
-
-
-/*Modificador*/
-
-
-/*Keyframes*/
 
 svg {
    border: 1px solid var(--purple-medium-color);
@@ -78,10 +57,19 @@ svg {
    stroke-dashoffset: 3;
 }
 
-
-.st100 {
+.st1 {
    fill: none;
-   stroke: rgb(255, 136, 0);
+   stroke: var(--blue-color);
+   stroke-width: 10;
+   stroke-linecap: round;
+   stroke-dasharray: 1, 25;
+   stroke-dashoffset: 3;
+}
+
+
+.st2 {
+   fill: none;
+   stroke: var(--cyan-color);
    stroke-width: 10;
    stroke-linecap: round;
    stroke-dasharray: 1, 20;
@@ -89,72 +77,27 @@ svg {
 }
 
 
-
-
 .st3 {
    fill: none;
-   stroke: var(--blue-color);
+   stroke: var(--orange-color);
    stroke-width: 10;
    stroke-linecap: round;
    stroke-dasharray: 1, 18;
    stroke-miterlimit: 10;
 }
-
-
-.st4 {
-   fill: none;
-   stroke: #00BC7F;
-   stroke-width: 10;
-   stroke-linecap: round;
-   stroke-dasharray: 1, 18;
-   stroke-miterlimit: 10;
-}
-
 
 
 .st6 {
    fill: none;
-   stroke: var(--pink-color);
+   stroke: var(--purple-intense-color);
    stroke-width: 10;
    stroke-linecap: round;
    stroke-dasharray: 1, 18;
    stroke-miterlimit: 10;
 }
 
-/* .dashed-line {
-   stroke-dasharray: 1, 9;
-} */
 
-@keyframes dash-animation {
-   to {
-      stroke-dashoffset: 1000;
-   }
-}
-
-@keyframes dash-animation-opposite {
-   to {
-      stroke-dashoffset: -1000;
-   }
-}
-
-.dash-move {
-   animation: dash-animation 20s infinite cubic-bezier(1, .17, .02, .91);
-}
-
-.dash-move-opposite {
-   animation: dash-animation-opposite 20s infinite cubic-bezier(1, .17, .02, .91);
-}
-
-
-
-
-
-.grid {
-   background-color: var(--purple-dark-color);
-   width: 100%;
-   height: auto;
-   box-sizing: border-box;
-}
+/*Elemento*/
 
 .grid__container {
    display: grid;
@@ -177,15 +120,60 @@ svg {
    justify-content: center;
 }
 
+.header__title {
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 300;
+   color: rgb(var(--green-rbg-color));
+}
+
+.main__subtitle {
+   padding: 1em;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 100;
+   color: rgba(var(--white-rbg-color), 1);
+}
+
+.bg__canvas {
+   width: 100%;
+   height: auto;
+   background-color: var(--black-color);
+   box-sizing: border-box;
+}
+
+
+
+/*Modificador*/
+
+.dash--move {
+   animation: dash-animation 20s infinite cubic-bezier(1, .17, .02, .91);
+}
+
+.dash--move__opposite {
+   animation: dash-animation-opposite 20s infinite cubic-bezier(1, .17, .02, .91);
+}
+
+
+/*Keyframes*/
+
+@keyframes dash-animation {
+   to {
+      stroke-dashoffset: 1000;
+   }
+}
+
+@keyframes dash-animation-opposite {
+   to {
+      stroke-dashoffset: -1000;
+   }
+}
+
+
+
+
 /*Media Querys*/
 
 @media screen and (max-width: 1020px) {
-   
    .grid__container {
       grid-template-columns: repeat(1, 1fr);
-
-      grid-column-gap: 1em;
-      grid-row-gap: 1em;
-
    }
 }
