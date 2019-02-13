@@ -15,6 +15,7 @@
    </header>
    <main class="grid">
       <!-- 
+         LINE:
          El atributo x y y, posicionan nuestro svg.
          Con el atributo width="100%" height="auto", le indicamos el tamaño del contorno,
          con el atributo viewBox="0 0 1000 50", indicamos las medidas del lienzo,
@@ -29,13 +30,16 @@
 
          Nota: El atributo viewBox, recibe los siguientesd parametros:
                viewBox = <min-x> <min-y> <width> <height>
+
+         
+         POLILINEA:
+         Con las polilineas usamos la misma logica, pero todos los puntos los encapsularemos en un solo atributo llamado 'points',
+         Como cualquier grafica en un plano cartesiano, especificamos los vertices con puntos 'x' y 'y'.
+
+         points="[val x1] [val y1], [val x2] [val y2], ... , [val xi] [val yi], ..., [val xn] [val yn]
          
          Consultar para mas info: https://webdesign.tutsplus.com/es/tutorials/svg-viewport-and-viewbox-for-beginners--cms-30844
        -->
-
-
-
-
       <section class="grid__container">
          <div>
             <h2 class="main__subtitle">Linea solida Horizontal</h2>
@@ -80,36 +84,42 @@
          </div>
 
          <div>
-            <svg x="0px" y="0px" width="100%" height="auto" viewBox="0 0 800 200">
-               <polyline class="st100 dash-move" points="0,40 40,40 40,80 80,80 80,120 120,120 120,160" />
+            <h2 class="main__subtitle">Polilinea Animación Arriba</h2>
+            <svg x="0px" y="0px" width="100%" height="auto" viewBox="0 0 1000 200">
+               <polyline class="st100 dash-move" points="0 25, 250 25, 250 75, 500 75, 500 125, 750, 125, 750 175, 1000 175" />
             </svg>
          </div>
 
          <div>
-            <svg x="0px" y="0px" width="100%" height="auto" viewBox="0 0 800 200">
-               <polyline class="st100 dash-move-opposite" points="0,40 40,40 40,80 80,80 80, 80 80,160" />
+            <h2 class="main__subtitle">Polilinea Animación Abajo</h2>
+            <svg x="0px" y="0px" width="100%" height="auto" viewBox="0 0 1000 200">
+               <polyline class="st100 dash-move-opposite" points="0 25, 500 25, 500 125, 750 125, 750 175, 1000 175" />
             </svg>
          </div>
 
          <div>
+            <h2 class="main__subtitle">Linea Diagonal Animación Derecha</h2>
             <svg x="0px" y="0px" width="100%" height="auto" viewBox="0 0 800 200">
                <line class="st6 dashed-line dash-move-opposite" x1="0" y1="200" x2="800" y2="0" />
             </svg>
          </div>
 
          <div>
+            <h2 class="main__subtitle">Linea Diagonal Animación Derecha</h2>
             <svg x="0px" y="0px" width="100%" height="auto" viewBox="0 0 800 200">
                <line class="st6 dashed-line dash-move-opposite" x1="0" y1="0" x2="800" y2="200" />
             </svg>
          </div>
 
          <div>
+            <h2 class="main__subtitle">Linea Diagonal Animación Izquierda</h2>
             <svg x="0px" y="0px" width="100%" height="auto" viewBox="0 0 800 200">
                <line class="st6 dashed-line dash-move" x1="0" y1="0" x2="800" y2="200" />
             </svg>
          </div>
          
          <div>
+            <h2 class="main__subtitle">Linea Diagonal Animación Izquierda</h2>
             <svg x="0px" y="0px" width="100%" height="auto" viewBox="0 0 800 200">
                <line class="st6 dashed-line dash-move" x1="0" y1="200" x2="800" y2="0" />
             </svg>

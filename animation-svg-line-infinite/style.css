@@ -163,6 +163,8 @@ svg {
 
    grid-column-gap: 1em;
    grid-row-gap: 1em;
+
+   padding: 1em;
 }
 
 .grid__container>* {
