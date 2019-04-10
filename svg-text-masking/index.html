@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SVG Text Masking</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <main class="slide">
+      <section class="slide__picture"></section>
+      <section class="slide__svg">
+        <svg>
+          <defs>
+            <linearGradient id="gradient-layer" gradientTransform="rotate(70)">
+              <stop offset="15%" stop-color="#8a2be2"></stop>
+              <stop offset="90%" stop-color="#14e8ff"></stop>
+            </linearGradient>
+          </defs>
+          <mask id="mask-layer">
+            <rect height="100%" width="100%" fill="#fff"></rect>
+            <text
+              id="text-layer"
+              x="50%"
+              y="50%"
+              font-size="12em"
+              text-anchor="middle"
+            >
+              I❤️ CSS & SVG
+            </text>
+          </mask>
+
+          <rect
+            width="100%"
+            height="100%"
+            fill="url(#gradient-layer)"
+            fill-opacity="0.8"
+            mask="url(#mask-layer)"
+          ></rect>
+          <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
+        </svg>
+      </section>
+
+      <section class="article">
+         <h1 class="article__title">Hello SVG</h1>
+         <p class="article__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis,
+            reprehenderit. Minus ducimus iure alias laborum? Cumque natus quia,
+            earum nam neque animi beatae rem vitae provident autem quis corrupti
+            labore!
+         </p>
+         <p class="article__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis,
+            reprehenderit. Minus ducimus iure alias laborum? Cumque natus quia,
+            earum nam neque animi beatae rem vitae provident autem quis corrupti
+            labore!
+         </p>
+         <p class="article__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur
+            suscipit aperiam odio voluptatum fugit itaque voluptate officiis, a
+            voluptates pariatur? Adipisci perspiciatis minus architecto error
+            inventore! Eius repudiandae facere quis.
+         </p>
+         <p class="article__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur
+            suscipit aperiam odio voluptatum fugit itaque voluptate officiis, a
+            voluptates pariatur? Adipisci perspiciatis minus architecto error
+            inventore! Eius repudiandae facere quis.
+         </p>
+         <p class="article__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur
+            suscipit aperiam odio voluptatum fugit itaque voluptate officiis, a
+            voluptates pariatur? Adipisci perspiciatis minus architecto error
+            inventore! Eius repudiandae facere quis.
+         </p>
+         <p class="article__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur
+            suscipit aperiam odio voluptatum fugit itaque voluptate officiis, a
+            voluptates pariatur? Adipisci perspiciatis minus architecto error
+            inventore! Eius repudiandae facere quis.
+         </p>
+         <p class="article__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur
+            suscipit aperiam odio voluptatum fugit itaque voluptate officiis, a
+            voluptates pariatur? Adipisci perspiciatis minus architecto error
+            inventore! Eius repudiandae facere quis.
+         </p>
+      </section>
+    </main>
+
+    <main class="slide">
+      <section class="slide__video">
+        <video
+          autoplay
+          playsinline
+          muted
+          loop
+          preload
+          poster="./images/image_video01.jpg"
+        >
+          <source src="./videos/video01.webm" />
+          <source src="./videos/video01.mp4" />
+        </video>
+      </section>
+      <section class="slide__svg">
+        <svg>
+          <defs>
+            <linearGradient
+              id="gradient-video-layer"
+              gradientTransform="rotate(40)"
+            >
+              <stop offset="15%" stop-color="#ff0175"></stop>
+              <stop offset="90%" stop-color="#1b1c30"></stop>
+            </linearGradient>
+          </defs>
+          <mask id="mask-video-layer">
+            <rect height="100%" width="100%" fill="#fff"></rect>
+            <text
+              id="text-layer"
+              x="50%"
+              y="50%"
+              font-size="14em"
+              text-anchor="middle"
+            >
+              I❤️ HTML 📽️
+            </text>
+          </mask>
+
+          <rect
+            width="100%"
+            height="100%"
+            fill="url(#gradient-video-layer)"
+            fill-opacity="0.8"
+            mask="url(#mask-video-layer)"
+          ></rect>
+          <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
+        </svg>
+      </section>
+
+      <section class="article">
+        <h1 class="article__title">Hello SVG</h1>
+        <p class="article__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis,
+          reprehenderit. Minus ducimus iure alias laborum? Cumque natus quia,
+          earum nam neque animi beatae rem vitae provident autem quis corrupti
+          labore!
+        </p>
+        <p class="article__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis,
+          reprehenderit. Minus ducimus iure alias laborum? Cumque natus quia,
+          earum nam neque animi beatae rem vitae provident autem quis corrupti
+          labore!
+        </p>
+        <p class="article__text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur
+          suscipit aperiam odio voluptatum fugit itaque voluptate officiis, a
+          voluptates pariatur? Adipisci perspiciatis minus architecto error
+          inventore! Eius repudiandae facere quis.
+        </p>
+        <p class="article__text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur
+          suscipit aperiam odio voluptatum fugit itaque voluptate officiis, a
+          voluptates pariatur? Adipisci perspiciatis minus architecto error
+          inventore! Eius repudiandae facere quis.
+        </p>
+        <p class="article__text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur
+          suscipit aperiam odio voluptatum fugit itaque voluptate officiis, a
+          voluptates pariatur? Adipisci perspiciatis minus architecto error
+          inventore! Eius repudiandae facere quis.
+        </p>
+        <p class="article__text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur
+          suscipit aperiam odio voluptatum fugit itaque voluptate officiis, a
+          voluptates pariatur? Adipisci perspiciatis minus architecto error
+          inventore! Eius repudiandae facere quis.
+        </p>
+        <p class="article__text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur
+          suscipit aperiam odio voluptatum fugit itaque voluptate officiis, a
+          voluptates pariatur? Adipisci perspiciatis minus architecto error
+          inventore! Eius repudiandae facere quis.
+        </p>
+      </section>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>

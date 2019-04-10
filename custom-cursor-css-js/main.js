@@ -16,6 +16,7 @@
          cursor.classList.remove('cursor--expand');
       }, 500);
    });
+   
 })();
 
 
