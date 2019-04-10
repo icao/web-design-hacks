@@ -83,7 +83,6 @@ BEM:  Bloque - Elemento - Modificador
 }
 
 /*Media Querys*/
-
 @media screen and (max-width: 1350px) {
   .slide__svg mask text {
     font-size: 8em;
