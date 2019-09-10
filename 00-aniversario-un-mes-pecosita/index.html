@@ -1,575 +1,573 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>SVG Text Masking</title>
-    <link rel="stylesheet" href="./index.css" />
-  </head>
 
-  <body>
-    <main class="slide">
-      <!-- CERO SLIDE -->
-      <section class="slide__picture" id="slide__cero"></section>
-      <section class="slide__svg">
-        <svg>
-          <defs>
-            <linearGradient
-              id="gradient-layer-cero"
-              gradientTransform="rotate(70)"
-            >
-              <stop offset="0%" stop-color="#ff7e27"></stop>
-              <stop offset="100%" stop-color="#bc1f00"></stop>
-            </linearGradient>
-          </defs>
-          <mask id="mask-layer">
-            <rect height="100%" width="100%" fill="#fff"></rect>
-            <text id="text-layer" x="50%" y="50%" text-anchor="middle">
-              TE ESPERABA
-              <tspan x="50%" y="70%">🥰</tspan>
-            </text>
-          </mask>
-          <rect
-            width="100%"
-            height="100%"
-            fill="url(#gradient-layer-cero)"
-            fill-opacity="0.75"
-            mask="url(#mask-layer)"
-          ></rect>
-          <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
-        </svg>
-      </section>
-      <section class="article">
-        <h1 class="article__title">
-          Noche nostálgica
-        </h1>
-        <h2 class="article__subtitle align-end">
-          Hubo una vez un chico... <br />
-          perdido en el tiempo, divagando en las noches,<br />
-          extraviado en el alma. <br />
-        </h2>
-        <p class="article__text">
-          ¿A cuantos kilómetros de distancia se encuentra tu corazón? <br />
-          Aquella niña, la que todas las noches mira hacia el cielo...
-        </p>
-        <p class="article__text">
-          ¿Será verdad que ella con esos ojos tan dulces se queda mirando las
-          estrellas, en espera de mi llegada?
-        </p>
-        <p class="article__text">
-          Si ella pudiera ver aquella estrella sabría que a pesar de la
-          distancia, ella está tan cerca. <br />
-          Porque solo así, unidos con la mirada, nos conectamos en el alma,
-          utilizando nuestros corazones como nodos.
-        </p>
-        <p class="article__text">
-          Si ella pudiera saber que... aunque no la conozca en persona... <br />
-          hace de cierta manera que se genere un gran sentimiento en mi alma.
-        </p>
-        <p class="article__text">
-          ¿Cuántos hombres soñaron con ella y deseosos de tenerla a su lado?
-          ...como guía, tal cual estrella para los navíos. <br />
-          Y es que ella significa lo que representa la estrella del norte.
-          <br />
-          Para los extraviados en mares extraños y fríos… <br />
-          Una luz... una guia... la esperanza.
-        </p>
-        <p class="article__text__divisor">
-          ***
-        </p>
-        <p class="article__text">
-          Las noches se tornan un poco extrañas, tan solo poniéndome a pensar si
-          es que en verdad algún día podré conocerla.
-        </p>
-        <p class="article__text">
-          Ella en todos los sentidos, tan extraña, encantadora y tan mujer que
-          yo la admiro.
-        </p>
-        <p class="article__text">
-          Ojala y estos días solo pase alguna vez en su vida, como pensamientos
-          o espero como sentimiento en su corazón.
-        </p>
-        <p class="article__text">
-          Que tenga hoy en día una excelente mañana, que el desayuno o el
-          almuerzo se torne en uno, y que conforme su favorito almuerzayuno.
-        </p>
-        <p class="article__text">
-          ¿Por qué le escribo? si estando tan lejos puede que jamás la conozca y
-          solo rompa algún día esa capa de ilusiones y fantasías.
-        </p>
-        <p class="article__text">
-          Con usted mi dama, la mujer mas linda, que de sus pensares brotan solo
-          palabras y armonía, las partituras de esa mente tan linda. <br />
-          ...me aguanto tratando de no decir alguna palabra, pero no puedo.
-          Siento que si las evito, mi ser de expresarse se muere, y claro que no
-          cometería tal delito!
-        </p>
-        <p class="article__text__divisor">
-          ***
-        </p>
-        <p class="article__text">
-          ¿En donde es que te encuentras, amor de mis amores?
-        </p>
-        <p class="article__text">
-          ¿Cómo sabré si eres tu la indicada? Si ya varias han intentado usurpar
-          tu lugar, y lo único que terminan cometiendo es solo volver a
-          desfragmentar este, tu corazón.
-        </p>
-        <p class="article__text">
-          Tal vez te logré encontrar en mis vidas pasadas, <br />
-          ¿Eras tu? ¿La misma con la que sueño ahora?
-        </p>
-        <p class="article__text">
-          He de confesarte que muero por las noches con mis ganas de poder
-          abrazarte, de poder tenerte y hacerte parte de mi, con tan solo un
-          apretón en mi regazo.
-        </p>
-        <p class="article__text__reference">
-          Viernes, ‎15‎ de ‎enero‎ de ‎2016, ‏‎6:01 am.
-        </p>
-      </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>SVG Text Masking</title>
+  <link rel="stylesheet" href="./index.css" />
+</head>
 
-      <!-- UNO SLIDE -->
-      <section class="slide__picture" id="slide__uno"></section>
-      <section class="slide__svg">
-        <svg>
-          <defs>
-            <linearGradient
-              id="gradient-layer-uno"
-              gradientTransform="rotate(70)"
-            >
-              <stop offset="0%" stop-color="#000"></stop>
-              <stop offset="100%" stop-color="#000"></stop>
-            </linearGradient>
-          </defs>
-          <mask id="mask-layer-uno">
-            <rect height="100%" width="100%" fill="#fff"></rect>
-            <text id="text-layer" x="50%" y="50%" text-anchor="middle">
-              Y entonces...
-            </text>
-          </mask>
+<body>
+  <main class="slide">
+    <!-- CERO SLIDE -->
+    <section class="slide__picture" id="slide__cero"></section>
+    <section class="slide__svg">
+      <svg>
+        <defs>
+          <linearGradient id="gradient-layer-cero" gradientTransform="rotate(70)">
+            <stop offset="0%" stop-color="#ff7e27"></stop>
+            <stop offset="100%" stop-color="#bc1f00"></stop>
+          </linearGradient>
+        </defs>
+        <mask id="mask-layer">
+          <rect height="100%" width="100%" fill="#fff"></rect>
+          <text id="text-layer" x="50%" y="50%" text-anchor="middle">
+            TE ESPERABA
+            <tspan x="50%" y="70%">🥰</tspan>
+          </text>
+        </mask>
+        <rect width="100%" height="100%" fill="url(#gradient-layer-cero)" fill-opacity="0.75" mask="url(#mask-layer)">
+        </rect>
+        <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
+      </svg>
+    </section>
+    <section class="article">
+      <h1 class="article__title">
+        Noche nostálgica
+      </h1>
+      <h2 class="article__subtitle align-end">
+        Hubo una vez un chico... <br />
+        perdido en el tiempo, divagando en las noches,<br />
+        extraviado en el alma. <br />
+      </h2>
+      <p class="article__text">
+        ¿A cuantos kilómetros de distancia se encuentra tu corazón? <br />
+        Aquella niña, la que todas las noches mira hacia el cielo...
+      </p>
+      <p class="article__text">
+        ¿Será verdad que ella con esos ojos tan dulces se queda mirando las
+        estrellas, en espera de mi llegada?
+      </p>
+      <p class="article__text">
+        Si ella pudiera ver aquella estrella sabría que a pesar de la
+        distancia, ella está tan cerca. <br />
+        Porque solo así, unidos con la mirada, nos conectamos en el alma,
+        utilizando nuestros corazones como nodos.
+      </p>
+      <p class="article__text">
+        Si ella pudiera saber que... aunque no la conozca en persona... <br />
+        hace de cierta manera que se genere un gran sentimiento en mi alma.
+      </p>
+      <p class="article__text">
+        ¿Cuántos hombres soñaron con ella y deseosos de tenerla a su lado?
+        ...como guía, tal cual estrella para los navíos. <br />
+        Y es que ella significa lo que representa la estrella del norte.
+        <br />
+        Para los extraviados en mares extraños y fríos… <br />
+        Una luz... una guia... la esperanza.
+      </p>
+      <p class="article__text__divisor">
+        ***
+      </p>
+      <p class="article__text">
+        Las noches se tornan un poco extrañas, tan solo poniéndome a pensar si
+        es que en verdad algún día podré conocerla.
+      </p>
+      <p class="article__text">
+        Ella en todos los sentidos, tan extraña, encantadora y tan mujer que
+        yo la admiro.
+      </p>
+      <p class="article__text">
+        Ojala y estos días solo pase alguna vez en su vida, como pensamientos
+        o espero como sentimiento en su corazón.
+      </p>
+      <p class="article__text">
+        Que tenga hoy en día una excelente mañana, que el desayuno o el
+        almuerzo se torne en uno, y que conforme su favorito almuerzayuno.
+      </p>
+      <p class="article__text">
+        ¿Por qué le escribo? si estando tan lejos puede que jamás la conozca y
+        solo rompa algún día esa capa de ilusiones y fantasías.
+      </p>
+      <p class="article__text">
+        Con usted mi dama, la mujer mas linda, que de sus pensares brotan solo
+        palabras y armonía, las partituras de esa mente tan linda. <br />
+        ...me aguanto tratando de no decir alguna palabra, pero no puedo.
+        Siento que si las evito, mi ser de expresarse se muere, y claro que no
+        cometería tal delito!
+      </p>
+      <p class="article__text__divisor">
+        ***
+      </p>
+      <p class="article__text">
+        ¿En donde es que te encuentras, amor de mis amores?
+      </p>
+      <p class="article__text">
+        ¿Cómo sabré si eres tu la indicada? Si ya varias han intentado usurpar
+        tu lugar, y lo único que terminan cometiendo es solo volver a
+        desfragmentar este, tu corazón.
+      </p>
+      <p class="article__text">
+        Tal vez te logré encontrar en mis vidas pasadas, <br />
+        ¿Eras tu? ¿La misma con la que sueño ahora?
+      </p>
+      <p class="article__text">
+        He de confesarte que muero por las noches con mis ganas de poder
+        abrazarte, de poder tenerte y hacerte parte de mi, con tan solo un
+        apretón en mi regazo.
+      </p>
+      <p class="article__text__reference">
+        Viernes, ‎15‎ de ‎enero‎ de ‎2016, ‏‎6:01 am.
+      </p>
+    </section>
 
-          <rect
-            width="100%"
-            height="100%"
-            fill="url(#gradient-layer-uno)"
-            fill-opacity="0.8"
-            mask="url(#mask-layer-uno)"
-          ></rect>
-          <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
-        </svg>
-      </section>
-      <!-- DOS SLIDE -->
-      <section class="slide__picture" id="slide__dos"></section>
-      <section class="slide__svg">
-        <svg>
-          <defs>
-            <linearGradient
-              id="gradient-layer-dos"
-              gradientTransform="rotate(90)"
-            >
-              <stop offset="50%" stop-color="#e8ab00"></stop>
-              <stop offset="75%" stop-color="#033072"></stop>
-              <stop offset="90%" stop-color="#7f0b22"></stop>
-            </linearGradient>
-          </defs>
-          <mask id="mask-layer-dos">
-            <rect height="100%" width="100%" fill="#fff"></rect>
-            <text
-              id="text-layer"
-              class="slide__svg__one_word"
-              x="50%"
-              y="50%"
-              text-anchor="middle"
-            >
-              2019
-            </text>
-          </mask>
-          <rect
-            width="100%"
-            height="100%"
-            fill="url(#gradient-layer-dos)"
-            fill-opacity="0.85"
-            mask="url(#mask-layer-dos)"
-          ></rect>
-          <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
-        </svg>
-      </section>
+    <!-- UNO SLIDE -->
+    <section class="slide__picture" id="slide__uno"></section>
+    <section class="slide__svg">
+      <svg>
+        <defs>
+          <linearGradient id="gradient-layer-uno" gradientTransform="rotate(70)">
+            <stop offset="0%" stop-color="#000"></stop>
+            <stop offset="100%" stop-color="#000"></stop>
+          </linearGradient>
+        </defs>
+        <mask id="mask-layer-uno">
+          <rect height="100%" width="100%" fill="#fff"></rect>
+          <text id="text-layer" x="50%" y="50%" text-anchor="middle">
+            Y entonces...
+          </text>
+        </mask>
 
-      <section class="slide__video">
-        <video
-          autoplay
-          playsinline
-          muted
-          loop
-          preload
-          poster="./images/image_video_01.jpg"
-        >
-          <source src="./videos/video_01.mp4" />
-        </video>
-      </section>
-      <section class="slide__svg">
-        <svg>
-          <defs>
-            <linearGradient
-              id="gradient-video-layer"
-              gradientTransform="rotate(90)"
-            >
-              <stop offset="10%" stop-color="#000"></stop>
-              <stop offset="100%" stop-color="#360033"></stop>
-              <!-- <stop offset="100%" stop-color="##ff0084"></stop> -->
-            </linearGradient>
-          </defs>
-          <mask id="mask-video-layer">
-            <rect height="100%" width="100%" fill="#fff"></rect>
-            <text id="text-layer" class="" x="50%" y="45%" text-anchor="middle">
-              Llegó el día...
-              <tspan x="50%" y="65%">🛫</tspan>
-            </text>
-          </mask>
+        <rect width="100%" height="100%" fill="url(#gradient-layer-uno)" fill-opacity="0.8" mask="url(#mask-layer-uno)">
+        </rect>
+        <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
+      </svg>
+    </section>
+    <!-- DOS SLIDE -->
+    <section class="slide__picture" id="slide__dos"></section>
+    <section class="slide__svg">
+      <svg>
+        <defs>
+          <linearGradient id="gradient-layer-dos" gradientTransform="rotate(90)">
+            <stop offset="50%" stop-color="#e8ab00"></stop>
+            <stop offset="75%" stop-color="#033072"></stop>
+            <stop offset="90%" stop-color="#7f0b22"></stop>
+          </linearGradient>
+        </defs>
+        <mask id="mask-layer-dos">
+          <rect height="100%" width="100%" fill="#fff"></rect>
+          <text id="text-layer" class="slide__svg__one_word" x="50%" y="50%" text-anchor="middle">
+            2019
+          </text>
+        </mask>
+        <rect width="100%" height="100%" fill="url(#gradient-layer-dos)" fill-opacity="0.85"
+              mask="url(#mask-layer-dos)"></rect>
+        <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
+      </svg>
+    </section>
 
-          <rect
-            width="100%"
-            height="100%"
-            fill="url(#gradient-video-layer)"
-            fill-opacity="0.85"
-            mask="url(#mask-video-layer)"
-          ></rect>
-          <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
-        </svg>
-      </section>
-      <section class="article">
-        <!-- <h2 class="article__subtitle">Hola</h2> -->
-        <p class="article__title__banner">
-          Por fin te tuve cerca, <br />
-          Por fin te tenia en mis brazos, <br />
-          Por fin eramos uno, <br />
-          Después de tanto tiempo por fin..
-        </p>
-      </section>
+    <section class="slide__video">
+      <video autoplay playsinline muted loop preload poster="./images/image_video_01.jpg">
+        <source src="./videos/video_01.mp4" />
+      </video>
+    </section>
+    <section class="slide__svg">
+      <svg>
+        <defs>
+          <linearGradient id="gradient-video-layer" gradientTransform="rotate(90)">
+            <stop offset="10%" stop-color="#000"></stop>
+            <stop offset="100%" stop-color="#360033"></stop>
+          </linearGradient>
+        </defs>
+        <mask id="mask-video-layer">
+          <rect height="100%" width="100%" fill="#fff"></rect>
+          <text id="text-layer" class="" x="50%" y="45%" text-anchor="middle">
+            Llegó el día...
+            <tspan x="50%" y="65%">🛫</tspan>
+          </text>
+        </mask>
 
-      <!-- TRES SLIDE -->
-      <section class="slide__picture" id="slide__tres"></section>
-      <section class="slide__svg">
-        <svg>
-          <defs>
-            <linearGradient
-              id="gradient-layer-tres"
-              gradientTransform="rotate(40)"
-            >
-              <stop offset="15%" stop-color="#396afc"></stop>
-              <!-- <stop offset="90%" stop-color="#03001e"></stop> -->
-              <stop offset="90%" stop-color="#2948ff"></stop>
-            </linearGradient>
-          </defs>
-          <mask id="mask-layer-tres">
-            <rect height="100%" width="100%" fill="#fff"></rect>
-            <text id="text-layer" x="50%" y="50%" text-anchor="middle">
-              ¡Te encontré!
-            </text>
-          </mask>
+        <rect width="100%" height="100%" fill="url(#gradient-video-layer)" fill-opacity="0.85"
+              mask="url(#mask-video-layer)"></rect>
+        <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
+      </svg>
+    </section>
+    <section class="article">
+      <p class="article__title__banner">
+        Por fin te tuve cerca, <br />
+        Por fin te tenia en mis brazos, <br />
+        Después de tanto tiempo por fin... <br />
+      </p>
+    </section>
 
-          <rect
-            width="100%"
-            height="100%"
-            fill="url(#gradient-layer-tres)"
-            fill-opacity="0.70"
-            mask="url(#mask-layer-tres)"
-          ></rect>
-          <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
-        </svg>
-      </section>
+    <!-- TRES SLIDE -->
+    <section class="slide__picture" id="slide__tres"></section>
+    <section class="slide__svg">
+      <svg>
+        <defs>
+          <linearGradient id="gradient-layer-tres" gradientTransform="rotate(40)">
+            <stop offset="15%" stop-color="#396afc"></stop>
+            <stop offset="90%" stop-color="#2948ff"></stop>
+          </linearGradient>
+        </defs>
+        <mask id="mask-layer-tres">
+          <rect height="100%" width="100%" fill="#fff"></rect>
+          <text id="text-layer" x="50%" y="50%" text-anchor="middle">
+            <tspan x="50%" y="45%">¡Juntos</tspan>
+            <tspan x="50%" y="60%">Nos Amamos!</tspan>
+          </text>
+        </mask>
 
-      <!-- CUATRO SLIDE -->
-      <section class="slide__picture" id="slide__cuatro"></section>
-      <section class="slide__svg">
-        <svg>
-          <defs>
-            <linearGradient
-              id="gradient-layer-cuatro"
-              gradientTransform="rotate(70)"
-            >
-              <stop offset="15%" stop-color="#fff"></stop>
-              <stop offset="90%" stop-color="#fff"></stop>
-            </linearGradient>
-          </defs>
-          <mask id="mask-layer-cuatro">
-            <rect height="100%" width="100%" fill="#fff"></rect>
-            <text id="text-layer" x="50%" y="50%" text-anchor="middle">
-              Tocamos la gloria 💐
-              <!-- <tspan x="50%"y="35%">TE</tspan> -->
-              <!-- <tspan>TE</tspan> -->
-            </text>
-          </mask>
+        <rect width="100%" height="100%" fill="url(#gradient-layer-tres)" fill-opacity="0.90"
+              mask="url(#mask-layer-tres)"></rect>
+        <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
+      </svg>
+    </section>
+    <section class="article">
+      <p class="article__title__banner">
+        Entendí que ya te amaba desde tiempo atrás, <br />
+        Solo faltaba expresar este sentimiento de una y mil formas mas.
+      </p>
+    </section>
 
-          <rect
-            width="100%"
-            height="100%"
-            fill="url(#gradient-layer-cuatro)"
-            fill-opacity="0.8"
-            mask="url(#mask-layer-cuatro)"
-          ></rect>
-          <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
-        </svg>
-      </section>
+    <!-- CUATRO SLIDE -->
+    <section class="slide__picture" id="slide__cuatro"></section>
+    <section class="slide__svg">
+      <svg>
+        <defs>
+          <linearGradient id="gradient-layer-cuatro" gradientTransform="rotate(70)">
+            <stop offset="0%" stop-color="#00f1dd"></stop>
+            <stop offset="90%" stop-color="#270091"></stop>
+          </linearGradient>
+        </defs>
+        <mask id="mask-layer-cuatro">
+          <rect height="100%" width="100%" fill="#fff"></rect>
+          <text id="text-layer" class="" x="50%" y="50%" text-anchor="middle">
+            Amandonos
+          </text>
+        </mask>
+        <rect width="100%" height="100%" fill="url(#gradient-layer-cuatro)" fill-opacity="0.5"
+              mask="url(#mask-layer-cuatro)"></rect>
+        <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
+      </svg>
+    </section>
 
-      <!-- CINCO SLIDE -->
-      <section class="slide__picture" id="slide__cinco"></section>
-      <section class="slide__svg">
-        <svg>
-          <defs>
-            <linearGradient
-              id="gradient-layer-cinco"
-              gradientTransform="rotate(45)"
-            >
-              <stop offset="15%" stop-color="#2F80ED"></stop>
-              <stop offset="90%" stop-color="#1b1c30"></stop>
-            </linearGradient>
-          </defs>
-          <mask id="mask-layer">
-            <rect height="100%" width="100%" fill="#fff"></rect>
-            <text id="text-layer" x="50%" y="50%" text-anchor="middle">
-              TE AMO❤️
-              <!-- <tspan x="50%"y="35%">TE</tspan> -->
-              <!-- <tspan>TE</tspan> -->
-            </text>
-          </mask>
+    <section class="article">
+      <p class="article__title__banner">
+        ...bajo un cielo desconocido, <br>
+        Haciendo caso omiso al tiempo, <br>
+        Expresandonos con besos, al más puro estilo de acariciarnos el alma.
+      </p>
+    </section>
 
-          <rect
-            width="100%"
-            height="100%"
-            fill="url(#gradient-layer-cinco)"
-            fill-opacity="0.6"
-            mask="url(#mask-layer)"
-          ></rect>
-          <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
-        </svg>
-      </section>
+    <!-- TREINTA SLIDE -->
+    <section class="slide__picture" id="slide__treinta"></section>
+    <section class="slide__svg">
+      <svg>
+        <defs>
+          <linearGradient id="gradient-layer-treinta" gradientTransform="rotate(40)">
+            <stop offset="15%" stop-color="#e250ff"></stop>
+            <stop offset="90%" stop-color="#e250ff"></stop>
+          </linearGradient>
+        </defs>
+        <mask id="mask-layer-treinta">
+          <rect height="100%" width="100%" fill="#fff"></rect>
+          <text id="text-layer" x="50%" y="50%" text-anchor="middle">
+            <tspan x="50%" y="45%">Nos llegó</tspan>
+            <tspan x="50%" y="65%">la noche</tspan>
+          </text>
+        </mask>
 
-      <!-- SEIS SLIDE -->
-      <section class="slide__picture" id="slide__seis"></section>
-      <section class="slide__svg">
-        <svg>
-          <defs>
-            <linearGradient
-              id="gradient-layer-seis"
-              gradientTransform="rotate(45)"
-            >
-              <stop offset="15%" stop-color="#31c992"></stop>
-              <stop offset="90%" stop-color="#FDB99B"></stop>
-            </linearGradient>
-          </defs>
-          <mask id="mask-layer">
-            <rect height="100%" width="100%" fill="#fff"></rect>
-            <text id="text-layer" x="50%" y="50%" text-anchor="middle">
-              TE AMO❤️
-              <!-- <tspan x="50%"y="35%">TE</tspan> -->
-              <!-- <tspan>TE</tspan> -->
-            </text>
-          </mask>
+        <rect width="100%" height="100%" fill="url(#gradient-layer-treinta)" fill-opacity="0.60"
+              mask="url(#mask-layer-treinta)">
+        </rect>
+        <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
+      </svg>
+    </section>
 
-          <rect
-            width="100%"
-            height="100%"
-            fill="url(#gradient-layer-seis)"
-            fill-opacity="0.40"
-            mask="url(#mask-layer)"
-          ></rect>
-          <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
-        </svg>
-      </section>
+    <section class="article">
+      <p class="article__title__banner">
+        Nos llenamos de besos, <br>
+        Tocamos el cielo, <br>
+        Alcanzamos la gloria,<br>
+        Tus besos me hechizaron como nadie en la historia. <br>
+        <br>
+        Te di mi corazón,<br>
+        Te cobije con mi amor,<br>
+        Te envolví con estos brazos para depositarte en mi alma. <br>
+        <br>
+        Y encendimos esa llama, <br>
+        La calidez que nos faltaba, <br>
+        Las sombras se fueron, <br>
+        Huyeron con la luz de tu mirada.
+        <br>
+      </p>
+    </section>
 
-      <!-- SIETE SLIDE -->
-      <section class="slide__picture" id="slide__siete"></section>
-      <section class="slide__svg">
-        <svg>
-          <defs>
-            <linearGradient
-              id="gradient-layer-siete"
-              gradientTransform="rotate(70)"
-            >
-              <stop offset="15%" stop-color="#EC6EAD"></stop>
-              <stop offset="90%" stop-color="#3494E6"></stop>
-            </linearGradient>
-          </defs>
-          <mask id="mask-layer">
-            <rect height="100%" width="100%" fill="#fff"></rect>
-            <text id="text-layer" x="50%" y="50%" text-anchor="middle">
-              TE AMO❤️
-              <!-- <tspan x="50%"y="35%">TE</tspan> -->
-              <!-- <tspan>TE</tspan> -->
-            </text>
-          </mask>
+    <!-- CINCO SLIDE -->
+    <section class="slide__picture" id="slide__cinco"></section>
+    <section class="slide__svg">
+      <svg>
+        <defs>
+          <linearGradient id="gradient-layer-cinco" gradientTransform="rotate(45)">
+            <stop offset="15%" stop-color="#31c992"></stop>
+            <stop offset="90%" stop-color="#FDB99B"></stop>
+          </linearGradient>
+        </defs>
+        <mask id="mask-layer-cinco">
+          <rect height="100%" width="100%" fill="#fff"></rect>
+          <text id="text-layer" x="50%" y="50%" text-anchor="middle">
+            <tspan x="50%" y="45%">Tu en</tspan>
+            <tspan x="50%" y="65%">el jardin</tspan>
+          </text>
+        </mask>
+        <rect width="100%" height="100%" fill="url(#gradient-layer-cinco)" fill-opacity="0.35"
+              mask="url(#mask-layer-cinco)"></rect>
+        <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
+      </svg>
+    </section>
 
-          <rect
-            width="100%"
-            height="100%"
-            fill="url(#gradient-layer-siete)"
-            fill-opacity="0.60"
-            mask="url(#mask-layer)"
-          ></rect>
-          <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
-        </svg>
-      </section>
+    <section class="article">
+      <p class="article__title__banner">
+        Con las flores observandote,<br>
+        Adornaban tu belleza como la flor más bella,<br>
+        la dueña de todas, la reina, la mas destacada. <br>
+        <br>
+        Tanta belleza concentrada, integrando un cuadro digno de ser contemplado una eternidad. <br>
+        <br>
+        No podía creer que aquella mujer, la de hace 7 años. <br>
+        Estaba posada allí como lo hacía en mis memorias todas esas noches de desvelo. <br>
+        <br>
+        Ahora solo mía, mia... <br>
+        Como mi amor, mi esperanza y ...
+      </p>
+    </section>
 
-      <!-- OCHO SLIDE -->
-      <section class="slide__picture" id="slide__ocho"></section>
-      <section class="slide__svg">
-        <svg>
-          <defs>
-            <linearGradient
-              id="gradient-layer-ocho"
-              gradientTransform="rotate(70)"
-            >
-              <stop offset="15%" stop-color="#EC6EAD"></stop>
-              <stop offset="90%" stop-color="#3494E6"></stop>
-            </linearGradient>
-          </defs>
-          <mask id="mask-layer-ocho">
-            <rect height="100%" width="100%" fill="#fff"></rect>
-            <text
-              id="text-layer"
-              class="slide__svg__one_word"
-              x="50%"
-              y="50%"
-              text-anchor="middle"
-            >
-              <tspan x="50%" y="40%">Recuerdas</tspan>
-              <tspan x="50%" y="60%">esta canción?</tspan>
-            </text>
-          </mask>
+    <!-- SEIS SLIDE -->
+    <section class="slide__picture" id="slide__seis"></section>
+    <section class="slide__svg">
+      <svg>
+        <defs>
+          <linearGradient id="gradient-layer-seis" gradientTransform="rotate(45)">
+            <stop offset="15%" stop-color="#EC6EAD"></stop>
+            <stop offset="90%" stop-color="#3494E6"></stop>
+          </linearGradient>
+        </defs>
+        <mask id="mask-layer-seis">
+          <rect height="100%" width="100%" fill="#fff"></rect>
+          <text id="text-layer" class="slide__svg__one_word" x="50%" y="50%" text-anchor="middle">
+            <tspan x="50%" y="45%">Mi Vida</tspan>
+            <tspan x="50%" y="70%">😍</tspan>
 
-          <rect
-            width="100%"
-            height="100%"
-            fill="url(#gradient-layer-ocho)"
-            fill-opacity="0.80"
-            mask="url(#mask-layer-ocho)"
-          ></rect>
-          <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
-        </svg>
-      </section>
+          </text>
+        </mask>
+        <rect width="100%" height="100%" fill="url(#gradient-layer-seis)" fill-opacity="0.70"
+              mask="url(#mask-layer-seis)"></rect>
+        <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
+      </svg>
+    </section>
 
-      <!-- NUEVE SLIDE -->
-      <section class="slide__picture" id="slide__nueve"></section>
-      <section class="slide__svg">
-        <svg>
-          <defs>
-            <linearGradient
-              id="gradient-layer-nueve"
-              gradientTransform="rotate(0)"
-            >
-              <!-- <stop offset="15%" stop-color="#3494E6"></stop> -->
-              <stop offset="0%" stop-color="#3494E6"></stop>
-              <!-- <stop offset="50%" stop-color="#16BFFD"></stop>-->
-              <stop offset="40%" stop-color="#141E30"></stop>
-              <stop offset="60%" stop-color="#141E30"></stop>
-              <!-- <stop offset="90%" stop-color="#1b1c30"></stop> -->
-              <stop offset="100%" stop-color="#3494E6"></stop>
-              <!-- <stop offset="80%" stop-color="#141E30"></stop> -->
-            </linearGradient>
-          </defs>
-          <mask id="mask-layer-nueve">
-            <rect height="100%" width="100%" fill="#fff"></rect>
-            <text id="text-layer" x="50%" y="50%" text-anchor="middle">
-              Recuerdas esta canción?
-              <!-- <tspan x="50%"y="35%">TE</tspan> -->
-              <!-- <tspan>TE</tspan> -->
-            </text>
-          </mask>
+    <section class="article">
+      <p class="article__title__banner">
+        Las ilusiones fueron hechas realidad, <br>
+        Los sueños cumplidos,<br>
+        La evidencia de que Dios me amaba,<br>
+        Me escuchó todas esas constantes noches,<br>
+        La prueba de su existencia en este mundo, <br>
+        mi aliado y confidente ayudándome, desde el cielo.
+      </p>
+    </section>
 
-          <rect
-            width="100%"
-            height="100%"
-            fill="url(#gradient-layer-nueve)"
-            fill-opacity="0.5"
-            mask="url(#mask-layer-nueve)"
-          ></rect>
-          <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
-        </svg>
-      </section>
 
-      <section class="article">
-        <h1 class="article__title__song">Te esperaba</h1>
-        <p class="article__text__song">
-          Te pedí <br />
-          Con mi fuerza al universo <br />
-          Te escribí en un par de versos <br />
-          Que mandé volando al cielo<br />
-          Te pedí<br /><br />
-          Te soñé<br />
-          Y te amé sin conocerte<br />
-          Mis abrazos te llamaban<br />
-          A un ladito de la cama<br />
-          Te soñé<br /><br />
-          Presentí<br />
-          Cada día tu mirada<br />
-          Tu llegada, me rendí<br />
-          Ante el brillo de tu alma<br /><br />
-          Sí, soy aquel que desde siempre te esperaba<br />
-          Puedo admitir<br />
-          Que aunque fuera una locura no dudaba<br />
-          Sí, sí, sí, en mi corazón tu espacio yo guardaba<br />
-          Y ahora que estás aquí<br />
-          Veo el amor convertido en ti<br /><br />
-          Te encontré<br />
-          Al final de la escalera<br />
-          En la guerra de mi vida<br />
-          Tú habías sido mi bandera<br />
-          Y te encontré<br /><br />
-          Presentí<br />
-          Cada día tu mirada<br />
-          Tu llegada, me rendí<br />
-          Ante el brillo de tu alma<br /><br />
-          Sí, soy aquel que desde siempre te esperaba<br />
-          Puedo admitir<br />
-          Que aunque fuera una locura no dudaba<br />
-          Sí, sí, sí, en mi corazón tu espacio yo guardaba<br />
-          Y ahora que estás aquí<br />
-          Y ahora que estás aquí<br />
-          Veo el amor convertido en ti<br />
-        </p>
-      </section>
+    <!-- SIETE SLIDE -->
+    <section class="slide__picture" id="slide__siete"></section>
+    <section class="slide__svg">
+      <svg>
+        <defs>
+          <linearGradient id="gradient-layer-siete" gradientTransform="rotate(70)">
+            <stop offset="15%" stop-color="#2F80ED"></stop>
+            <stop offset="90%" stop-color="#1b1c30"></stop>
+          </linearGradient>
+        </defs>
+        <mask id="mask-layer-siete">
+          <rect height="100%" width="100%" fill="#fff"></rect>
+          <text id="text-layer" x="50%" y="50%" text-anchor="middle">
+            De regreso...
+          </text>
+        </mask>
 
-      <!-- DIEZ SLIDE -->
-      <section class="slide__picture" id="slide__diez"></section>
-      <section class="slide__svg">
-        <svg>
-          <defs>
-            <linearGradient
-              id="gradient-layer-diez"
-              gradientTransform="rotate(0)"
-            >
-              <stop offset="10%" stop-color="#f9a602"></stop>
-              <stop offset="90%" stop-color="#000"></stop>
-            </linearGradient>
-          </defs>
-          <mask id="mask-layer-diez">
-            <rect height="100%" width="100%" fill="#fff"></rect>
-            <text id="text-layer" x="50%" y="50%" text-anchor="middle">
-              <tspan x="50%" y="45%">TE AMO!</tspan>
-              <tspan x="50%" y="60%">AMOR DE MI VIDA!</tspan>
-              <tspan x="50%" y="80%">❤️</tspan>
-            </text>
-          </mask>
+        <rect width="100%" height="100%" fill="url(#gradient-layer-siete)" fill-opacity="0.45"
+              mask="url(#mask-layer-siete)"></rect>
+        <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
+      </svg>
+    </section>
+    <section class="article">
+      <p class="article__title__banner">
+        A mi partida comprendí que esa era la belleza de vivir,<br>
+        La esencia de un amor puro. <br>
+        La razón de dar todo, el motivo de superarme,<br>
+        Ser más fuerte que el destino.<br>
+        <br>
+        Haber cruzado tantos kilómetros, sobrevolando varias tierras, <br>
+        ciudades y mares desconocidos,<br>
+        Surcando el mismo cielo,<br> 
+        Repleto de estrellas, lluvia y truenos.<br>
+        <br>
+        Supe que tenia que regresar, <br>
+        Que no existían límites ni distancias para amarte. <br>
+        Que nada puede limitar o prohibir tenerte a mi lado.
+      </p>
+    </section>
+    <!-- OCHO SLIDE -->
+    <section class="slide__picture" id="slide__ocho"></section>
+    <section class="slide__svg">
+      <svg>
+        <defs>
+          <linearGradient id="gradient-layer-ocho" gradientTransform="rotate(0)">
+            <stop offset="0%" stop-color="#436b8f"></stop>
+            <stop offset="40%" stop-color="#141E30"></stop>
+            <stop offset="60%" stop-color="#141E30"></stop>
+            <stop offset="100%" stop-color="#436b8f"></stop>
+          </linearGradient>
+        </defs>
+        <mask id="mask-layer-ocho">
+          <rect height="100%" width="100%" fill="#fff"></rect>
+          <text id="text-layer" class="slide__svg__one_word" x="50%" y="50%" text-anchor="middle">
+            Hoy
+          </text>
+        </mask>
+        <rect width="100%" height="100%" fill="url(#gradient-layer-ocho)" fill-opacity="0.65"
+              mask="url(#mask-layer-ocho)"></rect>
+        <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
+      </svg>
+    </section>
+    <section class="article">
+      <p class="article__title__banner">
+        ...puedo decir firmemente con la confianza y sentirme correspondido de la misma forma,<br> Seguro de decirle y gritar a los
+        vientos que TE AMO, <br> Que una mujer me ve en su vida,<br> 
+        No por un instante, <br> 
+        No solo en un abrir y cerrar de ojos, <br>
+        No por el tiempo de un suspiro. <br>
+        Que me amas por un lapso de tiempo que sólo dictaran nuestras vidas, <br>
+        De aquí hasta que nos alcancen los años para amarnos.<br>
+        <br>
+        Te amo al momento de escribir estas palabras,<br>
+        Te amo al sentirme libre de amarte sin límites,<br>
+        Te amo porque me amas y nos amamos porque lo demostramos,<br>
+        Te amo porque en esos ojos no vi mentiras, porque vi ternura y pasión.
+      </p>
+    </section>
 
-          <rect
-            width="100%"
-            height="100%"
-            fill="url(#gradient-layer-diez)"
-            fill-opacity="0.7"
-            mask="url(#mask-layer-diez)"
-          ></rect>
-          <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
-        </svg>
-      </section>
-    </main>
-    <audio
-      id="pistaAudio"
-      src="./sounds/te_esperaba.flac"
-      preload="auto"
-    ></audio>
-    <script src="./index.js"></script>
-  </body>
+    <!-- NUEVE SLIDE -->
+    <section class="slide__picture" id="slide__nueve"></section>
+    <section class="slide__svg">
+      <svg>
+        <defs>
+          <linearGradient id="gradient-layer-nueve" gradientTransform="rotate(70)">
+            <stop offset="15%" stop-color="#EC6EAD"></stop>
+            <stop offset="90%" stop-color="#3494E6"></stop>
+          </linearGradient>
+        </defs>
+        <mask id="mask-layer-nueve">
+          <rect height="100%" width="100%" fill="#fff"></rect>
+          <text id="text-layer" x="50%" y="50%" text-anchor="middle">
+            <tspan x="50%" y="40%">Recuerdas</tspan>
+            <tspan x="50%" y="60%">esta canción?</tspan>
+          </text>
+        </mask>
+        <rect width="100%" height="100%" fill="url(#gradient-layer-nueve)" fill-opacity="0.80"
+              mask="url(#mask-layer-nueve)"></rect>
+        <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
+      </svg>
+    </section>
+
+    <section class="article">
+      <p class="article__text__divisor">
+        Detende un momento y escucha...
+      </p>
+      <h1 class="article__title__song">Te esperaba</h1>
+      <p class="article__text__song">
+        Te pedí <br />
+        Con mi fuerza al universo <br />
+        Te escribí en un par de versos <br />
+        Que mandé volando al cielo<br />
+        Te pedí<br /><br />
+        Te soñé<br />
+        Y te amé sin conocerte<br />
+        Mis abrazos te llamaban<br />
+        A un ladito de la cama<br />
+        Te soñé<br /><br />
+        Presentí<br />
+        Cada día tu mirada<br />
+        Tu llegada, me rendí<br />
+        Ante el brillo de tu alma<br /><br />
+        Sí, soy aquel que desde siempre te esperaba<br />
+        Puedo admitir<br />
+        Que aunque fuera una locura no dudaba<br />
+        Sí, sí, sí, en mi corazón tu espacio yo guardaba<br />
+        Y ahora que estás aquí<br />
+        Veo el amor convertido en ti<br /><br />
+        Te encontré<br />
+        Al final de la escalera<br />
+        En la guerra de mi vida<br />
+        Tú habías sido mi bandera<br />
+        Y te encontré<br /><br />
+        Presentí<br />
+        Cada día tu mirada<br />
+        Tu llegada, me rendí<br />
+        Ante el brillo de tu alma<br /><br />
+        Sí, soy aquel que desde siempre te esperaba<br />
+        Puedo admitir<br />
+        Que aunque fuera una locura no dudaba<br />
+        Sí, sí, sí, en mi corazón tu espacio yo guardaba<br />
+        Y ahora que estás aquí<br />
+        Y ahora que estás aquí<br />
+        Veo el amor convertido en ti<br />
+      </p>
+    </section>
+    <section class="article">
+      <p class="article__text__divisor">
+        *** <br>
+      </p>
+    </section>
+    <section class="article">
+      <p class="article__title__banner">
+        Que hermosa se ha vuelto mi vida hoy que te tengo aquí. <br>
+        <br>
+        Cuantos recuerdos por ser contados a partir de la unión de nuestro amor.<br>
+        <br>
+        Hoy me siento Feliz a tu lado mi amor!!!<br>
+      </p>
+    </section>
+    <!-- DIEZ SLIDE -->
+    <section class="slide__picture" id="slide__diez"></section>
+    <section class="slide__svg">
+      <svg>
+        <defs>
+          <linearGradient id="gradient-layer-diez" gradientTransform="rotate(0)">
+            <stop offset="10%" stop-color="#f9a602"></stop>
+            <stop offset="90%" stop-color="#000"></stop>
+          </linearGradient>
+        </defs>
+        <mask id="mask-layer-diez">
+          <rect height="100%" width="100%" fill="#fff"></rect>
+          <text id="text-layer" class="slide__svg__words_special"x="50%" y="50%" text-anchor="middle">
+            <tspan x="50%" y="40%">TE AMO!</tspan>
+            <tspan x="50%" y="55%">AMOR DE MI VIDA!</tspan>
+            <tspan x="50%" y="75%">❤️</tspan>
+          </text>
+        </mask>
+
+        <rect width="100%" height="100%" fill="url(#gradient-layer-diez)" fill-opacity="0.7"
+              mask="url(#mask-layer-diez)"></rect>
+        <!-- Problema de renderizado con webkit(chrome, opera) mask="url(#mask-layer)"-->
+      </svg>
+    </section>
+  </main>
+  <audio id="pistaAudio" src="./sounds/te_esperaba.flac" preload="auto"></audio>
+  <script src="./index.js"></script>
+</body>
+
 </html>

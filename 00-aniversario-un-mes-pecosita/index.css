@@ -3,19 +3,32 @@ BEM:  Bloque - Elemento - Modificador
 */
 
 /*Font*/
-@import url("https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700&display=swap");
+/* @import url("https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700&display=swap"); */
 
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap");
+/* @import url("https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap"); */
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("./fonts/Playfair_Display/PlayfairDisplay-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Old Standard TT";
+  src: url("./fonts/Old_Standard_TT/OldStandardTT-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Old Standard TT";
+  src: url("./fonts/Old_Standard_TT/OldStandardTT-Bold.ttf");
+  font-weight: 700;
+}
 
 /*Variables*/
 :root {
   --lol-color: #1f1f27;
   --lol-low-color: #1f1f27;
   --lol-medium-color: #28282e;
-  --lol-test: #f9a602;
-  --lol-test: #b47603;
-  --lol-test: #946001;
-  --lol-testsdfs: #bcec0c;
 }
 
 * {
@@ -39,41 +52,44 @@ BEM:  Bloque - Elemento - Modificador
 
 /*Elemento*/
 #slide__cero {
-  background-image: url("./images/DSC_0319.jpg");
+  background-image: url("./images/DSC_0319-min.jpg");
 }
 #slide__uno {
-  background-image: url("./images/DSC_0260.jpg");
+  background-image: url("./images/DSC_0260-min.jpg");
 }
 #slide__dos {
-  background-image: url("./images/DSC_0782.jpg");
+  background-image: url("./images/DSC_0782-min.jpg");
 }
 #slide__tres {
-  background-image: url("./images/DSC_0377.jpg");
+  background-image: url("./images/DSC_0377-min.jpg");
+}
+#slide__treinta {
+  background-image: url("./images/DSC_0594-min.jpg");
 }
 #slide__cuatro {
-  background-image: url("./images/DSC_0423_2.jpg");
+  background-image: url("./images/DSC_0423_2-min.jpg");
 }
 #slide__cinco {
-  background-image: url("./images/DSC_0772.jpg");
+  background-image: url("./images/DSC_0720_1-min.jpg");
 }
 #slide__seis {
-  background-image: url("./images/DSC_0720_1.jpg");
+  background-image: url("./images/DSC_0620_3-min.jpg");
 }
 
 #slide__siete {
-  background-image: url("./images/DSC_0620_3.jpg");
+  background-image: url("./images/DSC_0772-min.jpg");
 }
 
 #slide__ocho {
-  background-image: url("./images/DSC_0623_1.jpg");
+  background-image: url("./images/DSC_0765-min.jpg");
 }
 
 #slide__nueve {
-  background-image: url("./images/DSC_0765.jpg");
+  background-image: url("./images/DSC_0623_1-min.jpg");
 }
 
 #slide__diez {
-  background-image: url("./images/DSC_0315_3.jpg");
+  background-image: url("./images/DSC_0315_3-min.jpg");
 }
 
 .slide__picture {
@@ -147,9 +163,9 @@ BEM:  Bloque - Elemento - Modificador
 }
 
 .article__title__banner {
-  font-weight: 600;
-  font-size: calc(2em + 1.2vmin);
-  margin: calc(0.9em + 1.8vmin);
+  font-weight: 400;
+  font-size: calc(1.8em + 1.2vmin);
+  margin: calc(0.5em + 1.2vmin);
   text-align: center;
   color: var(--lol-medium-color);
 }
@@ -197,6 +213,12 @@ mask text.slide__svg__one_word {
   margin: 0 5vmin;
   font-size: calc(20vmin + 0.8em);
 }
+
+mask text.slide__svg__words_special {
+  /* font-size: calc(14vmin + 1.5em); */
+  margin: 0 5vmin;
+  font-size: calc(1.6em + 10vmin);
+}
 /*Media Querys*/
 @media screen and (min-width: 1350px) {
   .article {
@@ -209,7 +231,7 @@ mask text.slide__svg__one_word {
 
 @media screen and (max-width: 690px) {
   .article {
-    padding: calc(1.6em + 1vmin) calc(2.6em + 1vmin);
+    padding: calc(2.6em + 1vmin) calc(2.6em + 1vmin);
   }
   .article__title {
     font-size: calc(2.6em + 2vmin);
