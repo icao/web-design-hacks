@@ -1,0 +1,78 @@
+/*
+BEM:  Bloque - Elemento - Modificador
+*/
+
+/*Imports */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap');
+
+/*Variables*/
+:root {
+   --black-color: #17181c;
+   --blue-color: #2c47e0;
+   --pink-color: #b43ea4;
+   --white-color:#ffffff;
+   --white-rbg-color: 255, 255, 255;
+   --green-rbg-color: 0, 212, 113;
+   --font-primary: 'Montserrat', sans-serif;
+   --font-size: 20;
+   --line-height: 1.4;
+   /* NOTA: EN ESTA VARIABLE TIENES QUE ESTABLECER EL NUMERO DE LINEAS A MOSTRAR */
+   --lines: 8; 
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   font-family: var(--font-primary);
+   box-sizing: border-box;
+}
+
+
+/*Bloque*/
+.container {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue-color);
+}
+
+.card{
+  width: calc(490px - 3vmin);
+  height: 300px;
+  background-color: var(--white-color);
+  padding: 1.3em;
+  border-radius: 6px;
+  margin: 1em;
+}
+
+.card__title {
+  text-transform: capitalize;
+  margin-bottom: 1em;
+  color: var(--pink-color);
+  font-size: 28px;
+}
+
+.card__paragraph {
+  display: block;
+  display: -webkit-box;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  -webkit-line-clamp: var(--lines);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* NOTA: LEER MAS SOBRE BOX EN: http://blog.ikhuerta.com/css3-displaybox-maquetacion-con-el-modelo-de-caja-flexible */
+
+/*Elemento*/
+
+
+
+
+/*Modificador*/
+
+
