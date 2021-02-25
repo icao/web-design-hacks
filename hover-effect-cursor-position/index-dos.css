@@ -5,50 +5,43 @@ BEM:  Bloque - Elemento - Modificador
 /*Variables*/
 :root {
   --color-black: #1a1b2d;
+  --color-primary: #4bffa5;
 }
 
 * {
   margin: 0;
   padding: 0;
-  transition: 0.5s;
+  /* transition: 0.5s; */
 }
 
-.grid {
+.colection {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.grid__item {
-  --scale: 0;
+.colection__item {
   width: 100%;
   max-width: 350px;
   height: 500px;
-  /* border: 4px solid black; */
+
   margin: 1em;
   position: relative;
   overflow: hidden;
 }
 
-.grid__item::before {
-  content: "";
-  width: 100px;
-  height: 100px;
-  background-color: #4bffa5;
-  position: absolute;
-  top: var(--top-before);
-  left: var(--left-before);
-
-  z-index: 10;
-  transform: scale(var(--scale));
-
+.detail {
+  transform: scale(0);
   border-radius: 50%;
-  transition: transform 2s cubic-bezier(0.165, 0.85, 0.45, 1) 0s;
+  position: absolute;
+  background-color: var(--color-primary);
+  z-index: 10;
+  transition: transform 2.5s cubic-bezier(0.165, 0.85, 0.45, 1) 0s;
 }
 
-.grid__item:hover::before {
-  transform: scale(15);
+.detail--animated {
+  transform: scale(3);
 }
 
 .image {
