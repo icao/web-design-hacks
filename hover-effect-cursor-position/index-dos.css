@@ -4,7 +4,7 @@ BEM:  Bloque - Elemento - Modificador
 
 /*Variables*/
 :root {
-  --color-black: #1a1b2d;
+  --color-black: #181919;
   --color-primary: #4bffa5;
 }
 
@@ -12,6 +12,10 @@ BEM:  Bloque - Elemento - Modificador
   margin: 0;
   padding: 0;
   /* transition: 0.5s; */
+}
+
+body {
+  background-color: var(--color-black);
 }
 
 .colection {
