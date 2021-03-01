@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll(".grid__item");
 
   for (const item of elements) {
+    let maximumMeasure = Math.max(item.clientWidth, item.clientHeight);
     item.addEventListener("mouseenter", function (event) {
-      let maximumMeasure = Math.max(item.clientWidth, item.clientHeight);
       item.setAttribute("style", `--diameter: ${maximumMeasure}px;`);
 
       let x = event.layerY - maximumMeasure / 2;
