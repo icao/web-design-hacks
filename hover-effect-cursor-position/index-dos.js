@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
         );
       }
 
-      let x = event.layerX - detail.clientWidth / 2;
-      let y = event.layerY - detail.clientHeight / 2;
+      let x = event.pageX - event.target.offsetLeft - detail.clientWidth / 2;
+      let y = event.pageY - event.target.offsetTop - detail.clientHeight / 2;
 
       detail.style.setProperty("top", `${y}px`);
       detail.style.setProperty("left", `${x}px`);
@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     item.addEventListener("mouseleave", function (event) {
-      let x = event.layerX - detail.clientWidth / 2;
-      let y = event.layerY - detail.clientHeight / 2;
+      let x = event.pageX - event.target.offsetLeft - detail.clientWidth / 2;
+      let y = event.pageY - event.target.offsetTop - detail.clientHeight / 2;
 
       detail.style.setProperty("top", `${y}px`);
       detail.style.setProperty("left", `${x}px`);
