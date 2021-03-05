@@ -24,6 +24,14 @@
   overflow: hidden;
 }
 
+@media screen and (max-width: 768px) {
+  .colection__item {
+    width: 100%;
+    max-width: 550px;
+    height: 700px;
+  }
+}
+
 .detail {
   border-radius: 50%;
   position: absolute;
