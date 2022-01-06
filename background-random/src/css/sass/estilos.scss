@@ -1,0 +1,61 @@
+//Fonts
+$fontTitillium: 'Titillium Web',
+sans-serif;
+//Colors Pantone icaowebsite
+$fontColor: #212121;
+$blueBase: #0288d1;
+$blueLight: #03a9f4;
+$blueThin: #26b4f4;
+$grayDark: #17181c;
+$grayMedium: #424242;
+$grayRegular: #bdbdbd;
+$grayLight: #f2f2f2;
+$grayThin: #eff1f7;
+$white: #ffffff;
+$green: #1abc9c;
+$orange: #fa4949;
+$red: #f44336;
+$redRegular: #d32f2f;
+
+body{
+   font-family: $fontTitillium;
+}
+
+
+.main {
+   transition: background 1.5s ease;
+}
+
+header {
+   padding: 1em;
+   position: absolute;
+   img {
+      margin: 0;
+      max-width: 100px;
+      height: auto;
+   }
+}
+
+
+.centerXY {
+   width: auto;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+#monky {
+   margin: 0;
+   width: 500px;
+   height: auto;
+   svg {
+      .st2 {
+         fill: rgba(255, 255, 255, 0.8);
+      }
+      .st3 {
+         fill: rgba(23, 24, 28, 0.2);
+      }
+   }
+}
