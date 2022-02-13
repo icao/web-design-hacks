@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const pistaAudio = document.querySelector("#pistaAudio");
   const slideActivo = document.querySelector("#slide__nueve");
 
-  window.addEventListener("scroll", function() {
+  window.addEventListener("scroll", function () {
     // Medicion de el ScrollTop - Posicion respecto al Top de la pagina
     let windowHeight =
       (document.documentElement && document.documentElement.scrollTop) ||
@@ -16,5 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (windowHeight >= inicioSlideActivo && windowHeight <= finalSlideActivo) {
       pistaAudio.play();
     }
+
+    console.log(windowHeight, inicioSlideActivo, finalSlideActivo);
   });
 });
