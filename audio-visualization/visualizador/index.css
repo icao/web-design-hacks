@@ -1,0 +1,36 @@
+:root {
+  --black-dark: #141414;
+  --white: #f5f9ff;
+  --gray-light: #bebebe;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+
+.container {
+  background-color: var(--black-dark);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgb(25, 0, 247); */
+}
+
+.audioControl {
+  width: 50%;
+  margin: 50px auto;
+  display: block;
+}
