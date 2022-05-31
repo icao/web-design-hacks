@@ -1,5 +1,5 @@
 :root {
-  --black-dark: #141414;
+  --black-dark: #2b2b2b;
   --white: #f5f9ff;
   --gray-light: #bebebe;
 }
@@ -11,26 +11,47 @@
   transition: all 0.5s;
 }
 
-.container {
+.main {
+  display: flex;
+  flex-direction: column;
   background-color: var(--black-dark);
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 70vh;
 }
 
 .canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  /* background-color: rgb(25, 0, 247); */
+  background-color: rgb(25, 0, 247);
+}
+
+.controls {
+  background-color: rgba(7, 0, 68, 0.651);
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  gap: 3em;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .audioControl {
   width: 50%;
-  margin: 50px auto;
   display: block;
+  z-index: 100;
+}
+
+.inputAudio {
+  color: var(--white);
+  z-index: 100;
+  font-size: 20px;
 }

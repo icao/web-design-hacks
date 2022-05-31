@@ -8,10 +8,18 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <main>
+    <main class="main">
+      <div class="controls">
+        <audio id="audioControl" class="audioControl" controls></audio>
+        <input
+          type="file"
+          id="fileUpload"
+          class="inputAudio"
+          accept="audio/*"
+        />
+      </div>
       <div id="container" class="container">
         <canvas id="canvas" class="canvas"></canvas>
-        <audio id="audioControl" class="audioControl" controls></audio>
       </div>
     </main>
     <script src="./index.js"></script>
